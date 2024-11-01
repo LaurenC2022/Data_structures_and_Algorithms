@@ -37,7 +37,7 @@ class Solution(object):
             return 0
         
         # Recursive case: explore all four possible directions (DFS)
-                # 1. Move down
+                # 1. Move down 
         return (self.findPaths(m, n, maxMove - 1, startRow - 1, startColumn) +
                 # 2. Move up
                 self.findPaths(m, n, maxMove - 1, startRow + 1, startColumn) +
@@ -49,6 +49,21 @@ class Solution(object):
         # Video help: https://youtu.be/Urx87-NMm6c?si=HQ_qgHkRorAR_XtR
         # Through recusion each path is explored until the base case is reached all stack frames are popped off
         # and the result is returned 
+        # (0, 0), maxMove == 2: (-1, 0) (1, 0) (0, -1) (0, 1)
+                            # (-1, 0), maxMove == 1: return 1 because -1 < 0 
+                            # (1, 0), maxMove == 1: (0, 0) (2, 0) (1, -1)(0, 1)
+                                                # (0, 0), maxMove == 0: max moves == 0 :. return 0
+                                                # (2, 0), maxMove == 0: return 1 because startrow == m
+                                                # (1, -1), maxMove == 0: return 1 because startColumn < 0
+                                                # (0, 1), maxMove == 0: max moves == 0 :. return 0
+                            # (0, -1), maxMove == 1: return 1 because -1 < 0
+                            # (0, 1), maxMove == 1: (-1, 1) (1, 1) (0, 0) (0, 2)
+                                                # (-1, 1), maxMove == 0: return 1 because startRow < 0
+                                                # (1, 1), maxMove == 0: max moves == 0 :. return 0
+                                                # (0, 0), maxMove == 0: max moves == 0 :. return 0
+                                                # (0, 2), maxMove == 0: return 1 because startColumn == n
+                            
+
 
 # Example usage:
 result = Solution().findPaths(2, 2, 2, 0, 0)  # Expected output: 6
