@@ -19,12 +19,12 @@ class Solution(object):
         # [0, 0]] 
         # Video help: https://youtu.be/Bg5CLRqtNmk?si=vq9Hq1hYkP1bHrgu 
         # 
-        #                   (0, 0)
-        #                 /   |   \   \
-        #             (1, 0) (0, -1) (-1, 0) (0, 1)
-        #            / |  \    Out     Out   / |  \  \
-        #       (2,0)(1,-1)(0,0)(1,1)   (0,0)(1,1)(0,3)(-1,1)
-        #        Out   Out                        Out   Out
+        #                       (0, 0)
+        #                 /   |      \     \
+        #             (0, -1)(1, 0) (0, 1)(-1, 0)
+        #               Out  /|\\   /| \ \   Out
+        #     (1,-1)(2,0)(0,0)(1,1)(0,0)(1,1)(0,2)(-1,1)
+        #       Out  Out                      Out   Out
         #
         # for startingRow or startingColumn == 0, then the list is out of range
         # for startingRow or startingColumn < 0, then the list is out of range
