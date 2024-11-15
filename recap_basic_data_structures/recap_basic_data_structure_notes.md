@@ -55,3 +55,8 @@ Here’s a refined version:
 9. **Dictionary (Map)**: Associates or maps keys to values, allowing efficient lookup by key. Common underlying data structures: Hash Table, Binary Search Tree.
 
 ---
+
+## Application of ADT's 
+
+### Abstraction and optimization 
+
