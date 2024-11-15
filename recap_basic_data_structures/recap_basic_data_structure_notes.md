@@ -3,6 +3,16 @@
 ## Data Structures with descriptions 
 
 1. **Record (struct)**: A data structure that stores subitems (also called *fields*) with names associated with each subitem.
+    
+    ### Record
+    - **General Concept**: A record is a general term used to describe a collection of related data items, often used in databases and data structures.
+    - **Implementation**: In C++, records are typically implemented using `struct` or `class`.
+
+    #### Key Differences
+    - **Default Access Control**: `struct` members are public by default, while `class` members are private by default.
+    - **Use Cases**: `struct` is typically used for plain data structures, while `class` is used for objects that require encapsulation (data and methods are in the class for security) and additional functionality.
+    - **Flexibility**: Both `struct` and `class` can have member functions, constructors, destructors, and access specifiers (public, private, protected).
+
    
 2. **Array**: A data structure that stores an ordered list of items, where each item is accessible by its index.
 
@@ -40,6 +50,9 @@ Here’s a refined version:
 
 2. **Dynamic Array**: Holds ordered data with indexed access, allowing for dynamic resizing. Common underlying data structure: Array.
 
+    - **Dynamic Array**: This is a general term for an array that can resize itself when elements are added or removed. It provides random access to elements and typically doubles its size when it runs out of space.
+    - **Vector**: In C++, a vector is a specific implementation of a dynamic array provided by the Standard Template Library (STL). It offers additional functionalities like automatic resizing, iterators, and member functions for easier manipulation.
+
 3. **Stack**: Allows insertion and removal of items only at the top of the stack (LIFO - Last In, First Out). Common underlying data structure: Linked List.
 
 4. **Queue**: Allows insertion of items at the end and removal from the front (FIFO - First In, First Out). Common underlying data structure: Linked List.
@@ -58,5 +71,22 @@ Here’s a refined version:
 
 ## Application of ADT's 
 
-### Abstraction and optimization 
+### Abstraction, optimization & ADT's in Standar Libraries 
 
+- Using abstract data types allows programmers to focus on higher level operations, howeber underlying implementation is needed to analyze or improve runtime efficiency 
+
+#### Standard Libraries 
+
+- Most programming languages provide a standard library that implements common abstract data types (ADTs).
+- Some languages allow programmers to choose the underlying data structure used for the ADTs.
+- Other programming languages may use a specific data structure to implement each ADT or may automatically choose the underlying data structure.
+
+
+| Programming Language | Library                          | Common Supported ADTs                      |
+|----------------------|----------------------------------|--------------------------------------------|
+| Python               | Python standard library          | list, set, dict, deque                     |
+| C++                  | Standard Template Library (STL)  | vector, list, deque, queue, stack, set, map|
+| Java                 | Java collections framework (JCF) | Collection, set, list, map, queue, deque   |
+
+
+Does this work for you?
